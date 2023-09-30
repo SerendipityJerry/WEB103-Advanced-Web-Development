@@ -13,12 +13,13 @@ const renderCharacter = async () => {
   if (character) {
     document.getElementById('image').src = character.image
     document.getElementById('name').textContent = character.name
+    document.getElementById('country').textContent = 'Country: ' + character.country
     document.getElementById('description').textContent = character.description
     document.title = `Genshin Impact - ${character.name}`
   }
   else {
     const message = document.createElement('h2')
-    message.textContent = 'No Characters Available 😞'
+    message.textContent = 'No characters Available 😞'
     characterContent.appendChild(message)   
   }
 }
